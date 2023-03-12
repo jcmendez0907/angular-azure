@@ -16,7 +16,7 @@ jobs:
     - name: Building the project
       run: npm run --prod
     - name: 📂 Sync files
-      uses: SamKirkland/web-deploy@v1
+      uses: webfactory/ssh-agent@v0.7.0
       with:
         target-server: snowcloudmx.com
         remote-user: ${{ secrets.ftp_username }}
