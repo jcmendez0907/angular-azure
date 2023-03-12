@@ -22,3 +22,4 @@ jobs:
         remote-user: ${{ secrets.ftp_username }}
         private-ssh-key: ${{ secrets.ftp_password }}
         destination-path: ~/scedemo.snowcloudmx.com/
+        ssh-port: 7822
