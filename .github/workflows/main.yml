@@ -15,11 +15,10 @@ jobs:
       run: npm install
     - name: Building the project
       run: npm run --prod
-    - name: 📂 Sync files
-      uses: webfactory/ssh-agent@v0.7.0
+    - name: 📂 Sync Files
+      uses: SamKirkland/web-deploy@v1
       with:
         target-server: snowcloudmx.com
-        remote-user: ${{ secrets.ftp_username }}
-        private-ssh-key: ${{ secrets.ftp_password }}
+        remote-user: snowclou
+        private-ssh-key: ${{ secrets.MYKEY }}
         destination-path: ~/scedemo.snowcloudmx.com/
-        ssh-port: 7822
